@@ -1,7 +1,7 @@
 "use client" 
 import Head from "next/head";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import Loader from "./components/Loader";
 import Dashboard from "./components/Dashboard";
 
