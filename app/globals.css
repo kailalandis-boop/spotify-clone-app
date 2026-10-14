@@ -4,9 +4,27 @@
 
 @plugin "@tailwindcss/forms";
 
+@plugin "tailwind-scrollbar" {
+  nocompatible: true;
+  preferredStrategy: "pseudoelements";
+}
+
 @theme {
   --font-body: "Andada Pro", serif;
   --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  --breakpoint-2xl: 93.75rem;
+
+  --animate-pulse: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
 }
 
 @layer base {
