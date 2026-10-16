@@ -7,7 +7,7 @@
 //       <div className="pt-40 flex flex-col items-center space-y-4">
 //         <span className="relative w-100 h-62.5 lg:w-137.5 lg:h-60">
 //           {/* <Image
-//             src="https://rb.gy/y9mwtb"
+//             src="/spotify-logo.svg
 //             layout="fill"
 //             objectFit="contain"
 //             className="animate-pulse"
