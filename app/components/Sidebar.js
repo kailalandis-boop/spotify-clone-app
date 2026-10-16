@@ -16,7 +16,7 @@ function Sidebar() {
         src="/spotify-icon.webp"
         width={56}
         height={56}
-        objectFit="contain"
+        style={{ objectFit: 'contain' }}
       />
       <div className="flex flex-col space-y-8">
         <HomeIcon className="sidebarIcon text-white opacity-[0.85]" />

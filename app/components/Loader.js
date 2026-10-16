@@ -9,8 +9,9 @@ function Loader() {
           <Image
             src="/spotify-logo.svg"
             fill
-            objectFit="contain"
+            style={{ objectFit: 'contain' }} 
             className="animate-pulse"
+            loading="eager"
           />
         </span>
         <div className="flex space-x-2">

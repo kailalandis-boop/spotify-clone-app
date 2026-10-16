@@ -10,12 +10,17 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "api": "^7.0.3",
     "next": "16.4.0",
     "next-auth": "^4.24.15",
+    "node": "^26.12.0",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-icons": "^5.7.0",
-    "tailwind-scrollbar-hide": "^4.0.0"
+    "spotify": "^0.3.0",
+    "spotify-web-api-node": "^5.0.2",
+    "tailwind-scrollbar-hide": "^4.0.0",
+    "web": "^0.0.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.11",

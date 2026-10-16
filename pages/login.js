@@ -25,11 +25,13 @@ function Login({ providers }) {
       </Head>
 
       <Image
+        alt="Spotify Logo"
         src="/spotify-logo.svg"
         height={250}
         width={600}
-        objectFit="contain"
+        style={{ objectFit: 'contain' }} 
         className="animate-pulse"
+        loading="eager"
       />
       {Object.values(providers).map((provider) => (
         <div key={provider.id}>
