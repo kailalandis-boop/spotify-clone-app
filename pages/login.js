@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Loader from "../app/components/Loader";
 
-function Login({ providers }) {
+function login({ providers }) {
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -47,7 +47,7 @@ function Login({ providers }) {
   );
 }
 
-export default Login;
+export default login;
 
 export async function getServerSideProps() {
   const providers = await getProviders();

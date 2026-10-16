@@ -58,7 +58,7 @@ export const authOptions = {
     // ...add more providers here
   ],
   pages: {
-    Login: "/login",
+    signIn: "/login",
   },
   callbacks: {
     async jwt({ token, user, account }) {
