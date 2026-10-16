@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-// import Loader from "./components/Loader";
+import Loader from "./components/Loader";
 
-function Signin({ providers }) {
+function Login({ providers }) {
   const { data: session } = useSession();
   const router = useRouter();
 
@@ -45,7 +45,7 @@ function Signin({ providers }) {
   );
 }
 
-export default Signin;
+export default Login;
 
 export async function getServerSideProps() {
   const providers = await getProviders();
