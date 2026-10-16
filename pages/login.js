@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect } from "react";
-import Loader from "./components/Loader";
+import Loader from "../app/components/Loader";
 
 function Login({ providers }) {
   const { data: session } = useSession();
