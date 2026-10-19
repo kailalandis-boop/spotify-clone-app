@@ -1,8 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Search from "./Search";
 import { useSession } from "next-auth/react";
+import Poster from "./Poster";
+// import Search from "./Search";
+// import Track from "./Track";
 
 function Body({ spotifyApi }) {
   const { data: session } = useSession();

@@ -16,7 +16,7 @@ function Poster({ track, chooseTrack }) {
 
   return (
     <div
-      className="w-65 h-90 rounded-[50px] overflow-hidden relative text-white/80 cursor-pointer hover:scale-105 hover:text-white/100 transition duration-200 ease-out group mx-auto"
+      className="w-65 h-90 rounded-[50px] overflow-hidden relative text-white/80 cursor-pointer hover:scale-105 hover:text-white transition duration-200 ease-out group mx-auto"
       onClick={handlePlay}
     >
       <img
