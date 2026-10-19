@@ -11,6 +11,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "api": "^7.0.3",
+    "jotai": "^3.0.1",
     "next": "16.4.0",
     "next-auth": "^4.24.15",
     "node": "^26.12.0",

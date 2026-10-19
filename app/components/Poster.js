@@ -1,10 +1,10 @@
 import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
-import { useRecoilState } from "recoil";
+import { useAtom } from "jotai";
 import { playingTrackState, playState } from "../atoms/playerAtom";
 
 function Poster({ track, chooseTrack }) {
-  const [play, setPlay] = useRecoilState(playState);
-  const [playingTrack, setPlayingTrack] = useRecoilState(playingTrackState);
+  const [play, setPlay] = useAtom(playState);
+  const [playingTrack, setPlayingTrack] = useAtom(playingTrackState);
 
   const handlePlay = () => {
     chooseTrack(track);
