@@ -4,7 +4,7 @@ import { useState } from "react";
 import Search from "./Search";
 import { useSession } from "next-auth/react";
 
-function Body() {
+function Body({ spotifyApi }) {
   const { data: session } = useSession();
   const accessToken = session?.accessToken;
   const [search, setSearch] = useState("");
