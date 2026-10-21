@@ -7,6 +7,7 @@ function Loader() {
       <div className="pt-40 flex flex-col items-center space-y-4">
         <span className="relative w-100 h-62.5 lg:w-137.5 lg:h-60">
           <Image
+            alt=""
             src="/spotify-logo.svg"
             fill
             style={{ objectFit: 'contain' }} 
