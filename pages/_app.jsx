@@ -1,5 +1,8 @@
 import "../app/globals.css";
 import { SessionProvider } from "next-auth/react"
+import * as Jotai from "jotai";
+
+
 
 export default function App({
   Component,
@@ -7,7 +10,9 @@ export default function App({
 }) {
   return (
     <SessionProvider session={session}>
-      <Component {...pageProps} />
+      <Jotai.Provider>
+        <Component {...pageProps} />
+      </Jotai.Provider>
     </SessionProvider>
   )
 }

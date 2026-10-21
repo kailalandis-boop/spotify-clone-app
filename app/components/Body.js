@@ -4,14 +4,14 @@ import { useState, useEffect } from "react";
 import Search from "./Search";
 import { useSession } from "next-auth/react";
 import Poster from "./Poster";
-import Search from "./Search";
-// import Track from "./Track";
+import Track from "./Track";
 
 function Body({ spotifyApi }) {
   const { data: session } = useSession();
   const accessToken = session?.accessToken;
   const [search, setSearch] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [newReleases, setNewReleases] = useState([]);
 
   useEffect(() => {
     if (!accessToken) return;
