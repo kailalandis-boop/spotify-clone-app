@@ -6,7 +6,7 @@ import { useSession } from "next-auth/react";
 import Poster from "./Poster";
 import Track from "./Track";
 
-function Body({ spotifyApi }) {
+function Body({ spotifyApi, chooseTrack }) {
   const { data: session } = useSession();
   const accessToken = session?.accessToken;
   const [search, setSearch] = useState("");
@@ -20,10 +20,11 @@ function Body({ spotifyApi }) {
 
   // Searching...
   useEffect(() => {
-    if (!search) return setSearchResults([]);
     if (!accessToken) return;
 
-    spotifyApi.searchTracks(search).then((res) => {
+    spotifyApi.searchTracks(search.trim() || "Ella Langley", { limit: 10
+
+     }).then((res) => {
       setSearchResults(
         res.body.tracks.items.map((track) => {
           return {
@@ -40,23 +41,23 @@ function Body({ spotifyApi }) {
   }, [search, accessToken]);
 
     // New Releases...
-  useEffect(() => {
-    if (!accessToken) return;
+  // useEffect(() => {
+  //   if (!accessToken) return;
 
-    spotifyApi.getNewReleases().then((res) => {
-      setNewReleases(
-        res.body.albums.items.map((track) => {
-          return {
-            id: track.id,
-            artist: track.artists[0].name,
-            title: track.name,
-            uri: track.uri,
-            albumUrl: track.images[0].url,
-          };
-        })
-      );
-    });
-  }, [accessToken]);
+  //   spotifyApi.getNewReleases().then((res) => {
+  //     setNewReleases(
+  //       res.body.albums.items.map((track) => {
+  //         return {
+  //           id: track.id,
+  //           artist: track.artists[0].name,
+  //           title: track.name,
+  //           uri: track.uri,
+  //           albumUrl: track.images[0].url,
+  //         };
+  //       })
+  //     );
+  //   });
+  // }, [accessToken]);
 
   return (
     <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl grow md:mr-2.5">

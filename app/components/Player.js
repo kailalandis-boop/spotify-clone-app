@@ -32,7 +32,6 @@ function Player({ accessToken, trackUri }) {
         errorColor: "#fff",
       }}
       token={accessToken}
-      showSaveIcon
       callback={(state) => {
         setPlay(state.isPlaying);
       }}
